@@ -53,7 +53,7 @@ var WXBizMsgCrypt = require('wechat-crypto');
 var app = connect();
 app.use(connect.query());
 var cfg = {
-  token: 'some token',
+  token: 'woodwechattest',
   appid: 'appid',
   encodingAESKey: 'SvFHaQqrlAhRud3ye6f8ujJsR2LeYbxzPPIzNlei2FX'
 };

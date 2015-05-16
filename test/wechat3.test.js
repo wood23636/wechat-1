@@ -8,7 +8,7 @@ require('should');
 
 var app = connect();
 app.use(connect.query());
-app.use('/wechat', wechat('some token').text(function (message, req, res, next) {
+app.use('/wechat', wechat('woodwechattest').text(function (message, req, res, next) {
   // 微信输入信息都在message上
   // 回复屌丝(普通回复)
   if (message.FromUserName === 'diaosi') {
@@ -58,7 +58,7 @@ describe('wechat.js 0.3.0', function () {
         timestamp: new Date().getTime(),
         nonce: parseInt((Math.random() * 10e10), 10)
       };
-      var s = ['some token', q.timestamp, q.nonce].sort().join('');
+      var s = ['woodwechattest', q.timestamp, q.nonce].sort().join('');
       q.signature = require('crypto').createHash('sha1').update(s).digest('hex');
       q.echostr = 'hehe';
       request(app)

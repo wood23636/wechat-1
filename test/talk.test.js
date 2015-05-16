@@ -13,7 +13,7 @@ var app = connect();
 app.use(connect.query());
 app.use(connect.cookieParser());
 app.use(connect.session({secret: 'keyboard cat', cookie: {maxAge: 60000}}));
-app.use('/wechat', wechat('some token', wechat.text(function (info, req, res, next) {
+app.use('/wechat', wechat('woodwechattest', wechat.text(function (info, req, res, next) {
   if (info.Content === 'list') {
     res.wait('view', function (err) {
       should.not.exist(err);

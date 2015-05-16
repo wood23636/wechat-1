@@ -9,7 +9,7 @@ var wechat = require('../');
 
 var app = connect();
 app.use(connect.query());
-app.use('/wechat', wechat('some token', wechat.text(function (message, req, res, next) {
+app.use('/wechat', wechat('woodwechattest', wechat.text(function (message, req, res, next) {
   res.end('hehe');
 })));
 app.use('/wechat', function (req, res, next) {

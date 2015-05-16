@@ -12,7 +12,7 @@ var app = connect();
 app.use(connect.query());
 app.use(connect.cookieParser());
 app.use(connect.session({secret: 'keyboard cat', cookie: {maxAge: 60000}}));
-app.use('/wechat', wechat('some token', function (req, res, next) {
+app.use('/wechat', wechat('woodwechattest', function (req, res, next) {
   // 微信输入信息都在req.weixin上
   var info = req.weixin;
   if (info.Content === 'list') {

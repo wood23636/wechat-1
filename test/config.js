@@ -1,4 +1,4 @@
 module.exports = {
-  appid: 'wxc9135aade4e81d57',
-  appsecret: '0461795e98b8ffde5a212b5098f1b9b6'
+  appid: 'wx2ed9d8d807bfe6bf',
+  appsecret: 'd6efc799b003e368c795f69083a62ed6'
 };
